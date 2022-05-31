@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Leaders -->
+<!-- Author: Amazer -->
+<!-- DateCreated: 5/30/2022 10:18:25 AM -->
+<GameData>
+	<TraitModifiers>
+		<!-- 간디 -->
+		<Row>
+			<TraitType>TRAIT_LEADER_SATYAGRAHA</TraitType>
+			<ModifierId>AMZ_TRAIT_CITADELCIVILIZATION_DEFENSIVE_FAITH</ModifierId>
+		</Row>
+	</TraitModifiers>
+	<Modifiers>
+		<!-- 알렉산더 -->
+		<Update>
+			<Where ModifierId="TRAIT_TOWORLDSEND_HEAL_ON_WONDER_CAPTURE"/>
+			<Set SubjectRequirementSetId=""/>
+		</Update>
+		<!-- 간디 -->
+		<Row>
+			<ModifierId>AMZ_TRAIT_CITADELCIVILIZATION_DEFENSIVE_FAITH</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADD_DIPLOMATIC_YIELD_MODIFIER</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<!-- 여섯하늘여왕 -->
+		<Update>
+			<Where ModifierId="TRAIT_LEADER_NEARBY_CITIES_LOSE_YIELDS" Name="Amount"/>
+			<Set Value="-5, -5, -5, -5, -5, -5"/>
+		</Update>
+		<!-- 간디 -->
+		<Row>
+			<ModifierId>AMZ_TRAIT_CITADELCIVILIZATION_DEFENSIVE_FAITH</ModifierId>
+			<Name>DiplomaticYieldSource</Name>
+			<Value>WAR_DECLARATION_RECEIVED</Value>
+		</Row>
+		<Row>
+			<ModifierId>AMZ_TRAIT_CITADELCIVILIZATION_DEFENSIVE_FAITH</ModifierId>
+			<Name>TurnsActive</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>AMZ_TRAIT_CITADELCIVILIZATION_DEFENSIVE_FAITH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>AMZ_TRAIT_CITADELCIVILIZATION_DEFENSIVE_FAITH</ModifierId>
+			<Name>Amount</Name>
+			<Value>100</Value>
+		</Row>
+	</ModifierArguments>
+</GameData>

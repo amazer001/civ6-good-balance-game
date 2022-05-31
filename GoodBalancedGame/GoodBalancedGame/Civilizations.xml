@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Civilizations -->
+<!-- Author: Amazer -->
+<!-- DateCreated: 5/30/2022 10:18:10 AM -->
+<GameData>
+	<TraitModifiers>
+		<!-- 아라비아 -->
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_LAST_PROPHET</TraitType>
+			<ModifierId>AMZ_TRAIT_CULTURE_PER_FOREIGN_CITY_FOLLOWING_RELIGION</ModifierId>
+		</Row>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_LAST_PROPHET</TraitType>
+			<ModifierId>AMZ_TRAIT_FAITH_PER_FOREIGN_CITY_FOLLOWING_RELIGION</ModifierId>
+		</Row>
+	</TraitModifiers>
+	<Modifiers>
+		<!-- 아라비아 -->
+		<Row>
+			<ModifierId>AMZ_TRAIT_CULTURE_PER_FOREIGN_CITY_FOLLOWING_RELIGION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_RELIGION_ADD_PLAYER_BELIEF_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>AMZ_TRAIT_FAITH_PER_FOREIGN_CITY_FOLLOWING_RELIGION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_RELIGION_ADD_PLAYER_BELIEF_YIELD</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<!-- 아라비아 -->
+		<Update>
+			<Where ModifierId="TRAIT_SCIENCE_PER_FOREIGN_CITY_FOLLOWING_RELIGION" Name="Amount"/>
+			<Set Value="2"/>
+		</Update>
+		<!-- 아라비아 -->
+		<Row>
+			<ModifierId>AMZ_TRAIT_CULTURE_PER_FOREIGN_CITY_FOLLOWING_RELIGION</ModifierId>
+			<Name>BeliefYieldType</Name>
+			<Value>BELIEF_YIELD_PER_FOREIGN_CITY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AMZ_TRAIT_CULTURE_PER_FOREIGN_CITY_FOLLOWING_RELIGION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>AMZ_TRAIT_CULTURE_PER_FOREIGN_CITY_FOLLOWING_RELIGION</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>AMZ_TRAIT_CULTURE_PER_FOREIGN_CITY_FOLLOWING_RELIGION</ModifierId>
+			<Name>PerXItems</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>AMZ_TRAIT_FAITH_PER_FOREIGN_CITY_FOLLOWING_RELIGION</ModifierId>
+			<Name>BeliefYieldType</Name>
+			<Value>BELIEF_YIELD_PER_FOREIGN_CITY</Value>
+		</Row>
+		<Row>
+			<ModifierId>AMZ_TRAIT_FAITH_PER_FOREIGN_CITY_FOLLOWING_RELIGION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>AMZ_TRAIT_FAITH_PER_FOREIGN_CITY_FOLLOWING_RELIGION</ModifierId>
+			<Name>Amount</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>AMZ_TRAIT_FAITH_PER_FOREIGN_CITY_FOLLOWING_RELIGION</ModifierId>
+			<Name>PerXItems</Name>
+			<Value>1</Value>
+		</Row>
+	</ModifierArguments>
+</GameData>

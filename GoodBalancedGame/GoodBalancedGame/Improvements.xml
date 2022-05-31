@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Improvements -->
+<!-- Author: Amazer -->
+<!-- DateCreated: 5/30/2022 10:21:19 AM -->
+<GameData>
+	<ImprovementModifiers>
+		<!-- 스핑크스 -->
+		<Row>
+			<ImprovementType>IMPROVEMENT_SPHINX</ImprovementType>
+			<ModifierId>AMZ_SPHINX_hOLYSITEADJACENCY_FAITH</ModifierId>
+		</Row>
+	</ImprovementModifiers>
+	<Improvement_Adjacencies>
+		<!-- 쿠르간 -->
+		<Row ImprovementType="IMPROVEMENT_KURGAN" YieldChangeId="Amz_Kurgan_Faith_Camp"/>
+		<Row ImprovementType="IMPROVEMENT_KURGAN" YieldChangeId="Amz_Kurgan_Faith_Stirrups_Camp"/>
+	</Improvement_Adjacencies>
+	<Adjacency_YieldChanges>
+		<!-- 쿠르간 -->
+		<Row ID="Amz_Kurgan_Faith_Camp" Description="Placeholder" YieldType="YIELD_FAITH" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_CAMP" ObsoleteTech="TECH_STIRRUPS"/>
+		<Row ID="Amz_Kurgan_Faith_Stirrups_Camp" Description="Placeholder" YieldType="YIELD_FAITH" YieldChange="2" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_CAMP" PrereqTech="TECH_STIRRUPS"/>
+	</Adjacency_YieldChanges>
+	<Modifiers>
+		<!-- 스핑크스 -->
+		<Row>
+			<ModifierId>AMZ_SPHINX_hOLYSITEADJACENCY_FAITH</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_PLOT_ADJUST_PLOT_YIELDS</ModifierType>
+			<SubjectRequirementSetId>PLOT_ADJACENT_TO_HOLYSITE_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Update>
+			<!-- 지구라트 -->
+			<Where ModifierId="ZIGGURAT_RIVERADJACENCY_CULTURE" Name="Amount"/>
+			<Set Value="2"/>
+		</Update>
+		<!-- 스핑크스 -->
+		<Row>
+			<ModifierId>AMZ_SPHINX_hOLYSITEADJACENCY_FAITH</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FAITH</Value>
+		</Row>
+		<Row>
+			<ModifierId>AMZ_SPHINX_hOLYSITEADJACENCY_FAITH</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+	</ModifierArguments>
+</GameData>

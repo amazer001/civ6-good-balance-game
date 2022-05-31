@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Districts -->
+<!-- Author: Amazer -->
+<!-- DateCreated: 5/30/2022 10:18:48 AM -->
+<GameData>
+	<!-- 목욕탕 -->
+	<Districts>
+		<Update>
+			<Where DistrictType="DISTRICT_BATH"/>
+			<Set Entertainment="2"/>
+		</Update>
+	</Districts>
+	<DistrictModifiers>
+		<!-- 항구 생산력 상향 -->
+		<Row>
+			<DistrictType>DISTRICT_HARBOR</DistrictType>
+			<ModifierId>AMZ_HARBOR_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<DistrictType>DISTRICT_ROYAL_NAVY_DOCKYARD</DistrictType>
+			<ModifierId>AMZ_HARBOR_PRODUCTION</ModifierId>
+		</Row>
+		<Row>
+			<DistrictType>DISTRICT_COTHON</DistrictType>
+			<ModifierId>AMZ_HARBOR_PRODUCTION</ModifierId>
+		</Row>
+	</DistrictModifiers>
+	<Modifiers>
+		<!-- 항구 생산력 상향 -->
+		<Row>
+			<ModifierId>AMZ_HARBOR_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>AMZ_PLOT_HAS_HARBOR_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<!-- 항구 생산력 상향 -->
+		<Row>
+			<ModifierId>AMZ_HARBOR_PRODUCTION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>AMZ_HARBOR_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+	</ModifierArguments>
+	
+	<RequirementSets>
+		<Row>
+			<RequirementSetId>AMZ_PLOT_HAS_HARBOR_REQUIREMENTS</RequirementSetId>
+			<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+		</Row>
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>AMZ_PLOT_HAS_HARBOR_REQUIREMENTS</RequirementSetId>
+			<RequirementId>AMZ_REQUIRES_PLOT_HAS_HARBOR</RequirementId>
+		</Row>
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row>
+			<RequirementId>AMZ_REQUIRES_PLOT_HAS_HARBOR</RequirementId>
+			<RequirementType>REQUIREMENT_CITY_HAS_DISTRICT</RequirementType>
+		</Row>
+	</Requirements>
+	<RequirementArguments>
+		<Row>
+			<RequirementId>AMZ_REQUIRES_PLOT_HAS_HARBOR</RequirementId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_HARBOR</Value>
+		</Row>
+	</RequirementArguments>
+</GameData>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Buildings -->
+<!-- Author: Amazer -->
+<!-- DateCreated: 5/30/2022 10:22:03 AM -->
+<GameData>
+	<Buildings>
+		<!-- 하수관 -->
+		<Update>
+			<Where BuildingType="BUILDING_SEWER"/>
+			<Set Entertainment="2"/>
+		</Update>
+		<!-- 유흥단지, 워터파크 관련 -->
+		<Update>
+			<Where BuildingType="BUILDING_ARENA"/>
+			<Set Entertainment="3"/>
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_TLACHTLI"/>
+			<Set Entertainment="3"/>
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_ZOO"/>
+			<Set Entertainment="2"/>
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_THERMAL_BATH"/>
+			<Set Entertainment="3"/>
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_STADIUM"/>
+			<Set Entertainment="2"/>
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_FERRIS_WHEEL"/>
+			<Set Entertainment="3"/>
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_AQUARIUM"/>
+			<Set Entertainment="2"/>
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_AQUATICS_CENTER"/>
+			<Set Entertainment="2"/>
+		</Update>
+	</Buildings>
+	<BuildingModifiers>
+		<!-- 알현실 -->
+		<Row BuildingType="BUILDING_GOV_TALL" ModifierId="AMZ_GOV_TALL_AMENITY_BUFF_ALL"/>
+		<Row BuildingType="BUILDING_GOV_TALL" ModifierId="AMZ_GOV_TALL_HOUSING_BUFF_ALL"/>
+		<!-- 국립역사박물관 -->
+		<Row BuildingType="BUILDING_GOV_CULTURE" ModifierId="AMZ_GOV_CULTURE_DIPLOVP"/>
+	</BuildingModifiers>
+	<Modifiers>
+		<!-- 알현실 -->
+		<Row>
+			<ModifierId>AMZ_GOV_TALL_AMENITY_BUFF_ALL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_AMENITIES_FROM_GOVERNORS</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_NO_GOVERNOR_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>AMZ_GOV_TALL_HOUSING_BUFF_ALL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_POLICY_HOUSING</ModifierType>
+			<SubjectRequirementSetId>CITY_HAS_NO_GOVERNOR_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<!-- 국립역사박물관 -->
+		<Row>
+			<ModifierId>AMZ_GOV_CULTURE_DIPLOVP</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_DIPLOMATIC_VICTORY_POINTS</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<!-- 목조교회 -->
+		<Update>
+			<Where ModifierId="STAVECHURCH_SEARESOURCE_PRODUCTION" Name="Amount"/>
+			<Set Value="100"/>
+		</Update>
+		<!-- 알현실 -->
+		<Update>
+			<Where ModifierId="GOV_TALL_AMENITY_BUFF" Name="Amount"/>
+			<Set Value="4"/>
+		</Update>
+		<!-- 정보기관 -->
+		<Update>
+			<Where ModifierId="" Name="Amount"/>
+			<Set Value="2"/>
+		</Update>
+		<!-- 알현실 -->
+		<Row>
+			<ModifierId>AMZ_GOV_TALL_AMENITY_BUFF_ALL</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>AMZ_GOV_TALL_HOUSING_BUFF_ALL</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<!-- 국립역사박물관 -->
+		<Row>
+			<ModifierId>AMZ_GOV_CULTURE_DIPLOVP</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>AMZ_GOV_CULTURE_DIPLOVP</ModifierId>
+			<Name>Tooltip</Name>
+			<Value>LOC_DVP_TOOLTIP_OTHER_SOURCES</Value>
+		</Row>
+	</ModifierArguments>
+</GameData>

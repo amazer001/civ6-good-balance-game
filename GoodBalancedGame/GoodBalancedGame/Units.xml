@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Units -->
+<!-- Author: Amazer -->
+<!-- DateCreated: 5/30/2022 10:22:12 AM -->
+<GameData>
+	<!-- 히파스피스트 -->
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_HYPASPIST</UnitAbilityType>
+			<ModifierId>HETAIROI_GREAT_GENERAL_COMBAT_BONUS</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
+</GameData>
